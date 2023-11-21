@@ -1,14 +1,15 @@
-﻿Program Zad15;
-var st : string; i : integer;
+program zad15;
+var st,last:string; dlina,i,x,k,first,m:integer;
 begin
-  writeln('Напишите строку');
-  readln(st);
-  i:= 1;
-  repeat 
-    if (st[i] = 'x') and (st[i+1] = 'a') and (st[i+2] = 'b') and (st[i+3] = 'c') then
-       Delete(st, i, 1)
-    else
-      i := i + 1;
-  until i > length(st);
-  write(st);
+writeln ('Введите строку');
+readln (st);
+dlina := length(st);
+  if (st[1] = 'a') and (st[2] = 'b') and (st[3] = 'c') then begin
+    st[1] := 'w';
+    st[2] := 'w';
+    st[3] := 'w';
+  end
+  else
+      st := st + 'zzz';
+writeln (st);
 end.
